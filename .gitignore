@@ -1,0 +1,65 @@
+# Xilinx ISE / ISim generated files
+# Keep: VHDL sources, testbenches, .ucf constraints and the .xise project file
+
+# Build and implementation output
+*.bgn
+*.bld
+*.bit
+*.drc
+*.gise
+*.lso
+*.map
+*.mrp
+*.ncd
+*.ngc
+*.ngd
+*.ngr
+*.pad
+*.par
+*.pcf
+*.prj
+*.ptwx
+*.rpt
+*.stx
+*.syr
+*.twr
+*.twx
+*.unroutes
+*.ut
+*.xpi
+*.xrpt
+*.xst
+*_pad.csv
+*_pad.txt
+*_summary.html
+*_summary.xml
+*_usage.xml
+*_envsettings.html
+*_vhdl.prj
+
+# Logs and command journals
+*.cmd_log
+*.jou
+*.log
+fuse.log
+fuseRelaunch.cmd
+webtalk*.log
+webtalk*.xml
+
+# Simulation output
+isim/
+*.wdb
+*.vcd
+
+# Tool working directories
+_ngo/
+_xmsgs/
+iseconfig/
+xst/
+ipcore_dir/
+xlnx_auto_*/
+planAhead_run_*/
+
+# OS noise
+.DS_Store
+Thumbs.db
