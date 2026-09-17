@@ -13,43 +13,40 @@ results and the constraints used to run each design on hardware.
 | **Toolchain** | AMD/Xilinx ISE 14.7 · ISim |
 | **Target board** | Digilent Nexys 2 (Xilinx Spartan-3E) |
 
-## Repository structure
-
-```
-labs/
-  01-<topic>/
-    src/           -- synthesisable VHDL
-    tb/            -- testbenches
-    sim/           -- ISim waveform configs (.wcfg) and captured results
-    constraints/   -- Nexys 2 pin assignments (.ucf)
-    README.md      -- what the lab does, how it was verified, results
-```
-
-Each lab is self-contained: the sources, the testbench that verifies them and the
-evidence that it works.
-
-## Simulating a design (ISim)
-
-1. Open ISE and create a project targeting the Spartan-3E device on the Nexys 2.
-2. Add the files from `src/` as design sources and the ones from `tb/` as simulation
-   sources.
-3. Select the testbench in the hierarchy, switch the view to **Simulation**, and run
-   *Simulate Behavioral Model*.
-4. Load the matching `.wcfg` from `sim/` to get the same signal set and formatting.
-
-## Running on the Nexys 2
-
-1. Add the lab's `.ucf` from `constraints/` to the project.
-2. Run *Generate Programming File* and download the bitstream with iMPACT or Digilent
-   Adept.
-
 ## Labs
 
 | # | Lab | Topic | Status |
 | --- | --- | --- | --- |
-| 01 | — | — | — |
+| 01 | [Combinational blocks](labs/01-combinational-blocks) | 3-to-8 decoders, 8-to-3 priority encoder, absolute-value comparator | Simulated and run on the board |
 
-Filled in as the semester progresses.
+## Repository structure
+
+```
+labs/
+  01-combinational-blocks/
+    README.md              -- what the lab covers, design notes and verification
+    <design>/
+      <design>.vhd         -- synthesisable VHDL
+      <design>_simu.vhd    -- ISim testbench
+      pins.ucf             -- Nexys 2 pin assignments
+```
+
+Each design is self-contained: the entity, the testbench that verifies it and the
+constraints that put it on the board.
+
+## Simulating a design (ISim)
+
+1. Open ISE and create a project targeting the Spartan-3E device on the Nexys 2.
+2. Add the design `.vhd` as a design source and the matching `_simu.vhd` as a
+   simulation source.
+3. Select the testbench in the hierarchy, switch the view to **Simulation**, and run
+   *Simulate Behavioral Model*.
+
+## Running on the Nexys 2
+
+1. Add the design's `pins.ucf` to the project.
+2. Run *Generate Programming File* and download the bitstream with iMPACT or Digilent
+   Adept.
 
 ## Roadmap
 
