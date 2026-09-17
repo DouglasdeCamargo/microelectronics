@@ -1,0 +1,10 @@
+NET "x1" LOC = "G18";   # SW0
+NET "x2" LOC = "H18";   # SW1
+NET "x3" LOC = "K18";   # SW2
+NET "x4" LOC = "K17";   # SW3
+NET "x5" LOC = "L14";   # SW4
+NET "x6" LOC = "L13";   # SW5
+NET "x7" LOC = "N17";   # SW6
+NET "y0" LOC = "J14";   # LD0
+NET "y1" LOC = "J15";   # LD1
+NET "y2" LOC = "K15";   # LD2
