@@ -1,0 +1,18 @@
+##############################################################################
+# Nexys 2 (XC3S1200E-4 FG320) - LAB 2 / Projeto 3 (N = 2)
+#   a(1..0) -> SW1..SW0     b(1..0) -> SW3..SW2     opcode(2..0) -> SW6..SW4
+#   enable -> SW7           y(1..0) -> LD1..LD0     cout -> LD2   overflow -> LD3
+##############################################################################
+NET "a<0>"      LOC = "G18";   # SW0
+NET "a<1>"      LOC = "H18";   # SW1
+NET "b<0>"      LOC = "K18";   # SW2
+NET "b<1>"      LOC = "K17";   # SW3
+NET "opcode<0>" LOC = "L14";   # SW4
+NET "opcode<1>" LOC = "L13";   # SW5
+NET "opcode<2>" LOC = "N17";   # SW6
+NET "enable"    LOC = "R17";   # SW7
+
+NET "y<0>"      LOC = "J14";   # LD0
+NET "y<1>"      LOC = "J15";   # LD1
+NET "cout"      LOC = "K15";   # LD2
+NET "overflow"  LOC = "K14";   # LD3
