@@ -1,0 +1,18 @@
+##############################################################################
+# Nexys 2 (XC3S1200E-4 FG320) - LAB 2 / Projeto 2
+#   sel(2..0) -> SW2..SW0     d -> SW3     en -> SW4     y(7..0) -> LD7..LD0
+##############################################################################
+NET "sel<0>" LOC = "G18";   # SW0
+NET "sel<1>" LOC = "H18";   # SW1
+NET "sel<2>" LOC = "K18";   # SW2
+NET "d"      LOC = "K17";   # SW3
+NET "en"     LOC = "L14";   # SW4
+
+NET "y<0>"   LOC = "J14";   # LD0
+NET "y<1>"   LOC = "J15";   # LD1
+NET "y<2>"   LOC = "K15";   # LD2
+NET "y<3>"   LOC = "K14";   # LD3
+NET "y<4>"   LOC = "E17";   # LD4
+NET "y<5>"   LOC = "P15";   # LD5
+NET "y<6>"   LOC = "F4";    # LD6
+NET "y<7>"   LOC = "R4";    # LD7
