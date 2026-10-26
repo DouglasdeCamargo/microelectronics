@@ -18,21 +18,25 @@ results and the constraints used to run each design on hardware.
 | # | Lab | Topic | Status |
 | --- | --- | --- | --- |
 | 01 | [Combinational blocks](labs/01-combinational-blocks) | 3-to-8 decoders, 8-to-3 priority encoder, absolute-value comparator | Simulated and run on the board |
+| 02 | [Seven-segment, demux and ALU](labs/02-seven-segment-demux-alu) | BCD to seven-segment decoder, 1-to-8 demultiplexer, generic N-bit ALU | Simulated and run on the board |
+| 04 | [Digital clock](labs/04-digital-clock) | 24-hour clock: prescalers, BCD counters and multiplexed displays | Simulated and run on the board |
 
 ## Repository structure
 
 ```
 labs/
-  01-combinational-blocks/
+  NN-topic/
     README.md              -- what the lab covers, design notes and verification
-    <design>/
+    <design>/              -- one folder per design, when the lab has several
       <design>.vhd         -- synthesisable VHDL
       <design>_simu.vhd    -- ISim testbench
       pins.ucf             -- Nexys 2 pin assignments
+tools/
+  grava.sh                 -- builds a project and programs it onto the board
 ```
 
-Each design is self-contained: the entity, the testbench that verifies it and the
-constraints that put it on the board.
+A lab with a single multi-component design (lab 4) keeps its files directly in the lab
+folder instead.
 
 ## Simulating a design (ISim)
 
@@ -42,11 +46,15 @@ constraints that put it on the board.
 3. Select the testbench in the hierarchy, switch the view to **Simulation**, and run
    *Simulate Behavioral Model*.
 
+Designs with generics (the clock) take small divisor values in simulation; the defaults
+in the entity are the ones used for synthesis.
+
 ## Running on the Nexys 2
 
 1. Add the design's `pins.ucf` to the project.
 2. Run *Generate Programming File* and download the bitstream with iMPACT or Digilent
-   Adept.
+   Adept — or use [`tools/grava.sh`](tools), which does both and retargets the project
+   if the connected board is the other Nexys 2 revision.
 
 ## Roadmap
 
