@@ -1,0 +1,26 @@
+##############################################################################
+# Nexys 2 - LAB 4 / Projeto 1 - Relogio Digital
+#   clk -> oscilador de 50 MHz    rst -> SW0   pausa -> SW1   conf -> SW2
+#   dig(6..0) -> CA..CG           an(3..0) -> AN3..AN0
+##############################################################################
+
+NET "clk"   LOC = "B8";    # oscilador de 50 MHz
+NET "clk"   TNM_NET = "clk";
+TIMESPEC "TS_clk" = PERIOD "clk" 20 ns HIGH 50%;
+
+NET "rst"   LOC = "G18";   # SW0
+NET "pausa" LOC = "H18";   # SW1
+NET "conf"  LOC = "K18";   # SW2
+
+NET "dig<6>" LOC = "L18";  # CA - segmento A
+NET "dig<5>" LOC = "F18";  # CB - segmento B
+NET "dig<4>" LOC = "D17";  # CC - segmento C
+NET "dig<3>" LOC = "D16";  # CD - segmento D
+NET "dig<2>" LOC = "G14";  # CE - segmento E
+NET "dig<1>" LOC = "J17";  # CF - segmento F
+NET "dig<0>" LOC = "H14";  # CG - segmento G
+
+NET "an<0>" LOC = "F17";   # AN0 - digito mais a direita
+NET "an<1>" LOC = "H17";   # AN1
+NET "an<2>" LOC = "C18";   # AN2
+NET "an<3>" LOC = "F15";   # AN3 - digito mais a esquerda
