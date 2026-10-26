@@ -1,0 +1,21 @@
+##############################################################################
+# Nexys 2 (XC3S1200E-4 FG320) - LAB 2 / Projeto 1
+#   d(3..0) -> SW3..SW0        seg(6..0) -> CA..CG        an(3..0) -> AN3..AN0
+##############################################################################
+NET "d<0>"    LOC = "G18";   # SW0
+NET "d<1>"    LOC = "H18";   # SW1
+NET "d<2>"    LOC = "K18";   # SW2
+NET "d<3>"    LOC = "K17";   # SW3
+
+NET "seg<6>"  LOC = "L18";   # CA - segmento A
+NET "seg<5>"  LOC = "F18";   # CB - segmento B
+NET "seg<4>"  LOC = "D17";   # CC - segmento C
+NET "seg<3>"  LOC = "D16";   # CD - segmento D
+NET "seg<2>"  LOC = "G14";   # CE - segmento E
+NET "seg<1>"  LOC = "J17";   # CF - segmento F
+NET "seg<0>"  LOC = "H14";   # CG - segmento G
+
+NET "an<0>"   LOC = "F17";   # AN0
+NET "an<1>"   LOC = "H17";   # AN1
+NET "an<2>"   LOC = "C18";   # AN2
+NET "an<3>"   LOC = "F15";   # AN3
